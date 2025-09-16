@@ -1,0 +1,14 @@
+{
+    "name": "Lesson04_Scripting",
+    "rootNamespace": "GMPR2512.Lesson04_Scripting",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
