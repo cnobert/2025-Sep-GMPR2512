@@ -15,9 +15,9 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <EnableDefaultItems>false</EnableDefaultItems>
     <LangVersion>9.0</LangVersion>
-    <RootNamespace>GMPR2512.Lesson04_Scripting</RootNamespace>
+    <RootNamespace>GMPR2512.Lesson05_Final_Deathzone</RootNamespace>
     <OutputType>Library</OutputType>
-    <AssemblyName>Lesson04_Scripting</AssemblyName>
+    <AssemblyName>Lesson05_Final_Deathzone</AssemblyName>
     <TargetFramework>netstandard2.1</TargetFramework>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -48,10 +48,11 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.56f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/GMPR2512/Lesson04_Simple_Deathzone/DeathZone.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson05_Final_Deathzone/DeathZone.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson05_Final_Deathzone/Ball.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets/GMPR2512/Lesson04_Simple_Deathzone/Lesson04_Scripting.asmdef" />
+    <None Include="Assets/GMPR2512/Lesson05_Final_Deathzone/Lesson05_Final_Deathzone.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

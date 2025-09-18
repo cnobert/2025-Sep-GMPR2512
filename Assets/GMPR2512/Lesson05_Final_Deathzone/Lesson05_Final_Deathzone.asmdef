@@ -1,0 +1,14 @@
+{
+    "name": "Lesson05_Final_Deathzone",
+    "rootNamespace": "GMPR2512.Lesson05_Final_Deathzone",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
