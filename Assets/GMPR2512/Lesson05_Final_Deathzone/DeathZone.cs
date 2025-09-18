@@ -5,18 +5,7 @@ namespace GMPR2512.Lesson05_Final_Deathzone
 {
     public class DeathZone : MonoBehaviour
     {
-        void Awake()
-        {
-
-        }
-        void Start()
-        {
-        }
-
-        void Update()
-        {
-
-        }
+        [SerializeField] private Transform _spawnPoint;
         /*
             If at least one of two game objects has a Rigidbody2D, and they both have Collider2Ds, 
             when they collide the following three methods will be executed, if they exist, on both game ojects:
@@ -35,7 +24,7 @@ namespace GMPR2512.Lesson05_Final_Deathzone
             //we can give the ball at "tag"
             if (collision.collider.CompareTag("Ball"))
             {
-                Destroy(collision.gameObject);
+                collision.gameObject.transform.position = _spawnPoint.transform.position;
             }
         }
 

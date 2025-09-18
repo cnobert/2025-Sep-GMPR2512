@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets/GMPR2512/Lesson05_Final_Deathzone/DeathZone.cs" />
     <Compile Include="Assets/GMPR2512/Lesson05_Final_Deathzone/Ball.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson05_Final_Deathzone/ShowGizmo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/GMPR2512/Lesson05_Final_Deathzone/Lesson05_Final_Deathzone.asmdef" />
