@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 namespace GMPR2512.Lesson05_Final_Deathzone
@@ -24,8 +25,17 @@ namespace GMPR2512.Lesson05_Final_Deathzone
             //we can give the ball at "tag"
             if (collision.collider.CompareTag("Ball"))
             {
-                collision.gameObject.transform.position = _spawnPoint.transform.position;
+                GameObject ball = collision.collider.gameObject;
+                StartCoroutine(RespawnBall(ball));  
             }
+        }
+        private IEnumerator RespawnBall(GameObject ball)
+        {
+            Rigidbody2D ballRB = ball.GetComponent<Rigidbody2D>();
+            ballRB.linearVelocity = Vector2.zero;
+            ballRB.angularVelocity = 0;
+            yield return new WaitForSeconds(2);
+            ball.transform.position = _spawnPoint.position;
         }
 
     }

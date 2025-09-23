@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace GMPR2512.Lesson05_Final_Deathzone
 {
-    
     public class ShowGizmo : MonoBehaviour
     {
         //SerializeField exposes the private data member in the Unity editor, 
@@ -11,7 +10,12 @@ namespace GMPR2512.Lesson05_Final_Deathzone
         [SerializeField] private float _radius = 0.5f;
         void OnDrawGizmos()
         {
+            
             Gizmos.color = _gizmoColour;
+
+            //"transform" represents the transform of the game object to which this script
+            //is attached
+            //alternatively, we could GetComponent<Transform>().position
             Gizmos.DrawSphere(transform.position, _radius);
         }
     }

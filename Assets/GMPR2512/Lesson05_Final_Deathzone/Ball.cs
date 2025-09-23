@@ -22,6 +22,7 @@ namespace GMPR2512.Lesson05_Final_Deathzone
         void OnCollisionEnter2D(Collision2D collision)
         {
             string nameOfObjectIBumpedInto = collision.collider.name;
+            
             Debug.Log($"Ball collided with {nameOfObjectIBumpedInto}");
         }
     }
