@@ -1,0 +1,14 @@
+{
+    "name": "Lesson06_Bumper",
+    "rootNamespace": "GMPR2512.Lesson06_Bumper",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
