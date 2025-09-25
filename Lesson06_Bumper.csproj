@@ -48,6 +48,7 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.56f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/GMPR2512/Lesson06_Bumper/Bumper.cs" />
     <Compile Include="Assets/GMPR2512/Lesson06_Bumper/Ball.cs" />
   </ItemGroup>
   <ItemGroup>

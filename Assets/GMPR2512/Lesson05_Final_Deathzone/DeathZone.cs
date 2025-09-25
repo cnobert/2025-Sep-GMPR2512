@@ -17,16 +17,18 @@ namespace GMPR2512.Lesson05_Final_Deathzone
         void OnCollisionEnter2D(Collision2D collision)
         {
             Debug.Log("KAPPPPOWWWWW!");
+            #region comments
             //collision.collider represents the collider of the game object that bumped into us
             //collision.otherCollider represenst the collider of the game object
             //to which this script is attached
 
             //what if we only want to destroy it if it's a ball?
             //we can give the ball at "tag"
+            #endregion
             if (collision.collider.CompareTag("Ball"))
             {
                 GameObject ball = collision.collider.gameObject;
-                StartCoroutine(RespawnBall(ball));  
+                StartCoroutine(RespawnBall(ball));
             }
         }
         private IEnumerator RespawnBall(GameObject ball)
