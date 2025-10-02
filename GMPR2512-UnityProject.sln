@@ -79,6 +79,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras.Edi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{32A1F291-FF90-D30C-616B-F62C09A173D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GMPR2512.Lesson07_Flipper", "GMPR2512.Lesson07_Flipper.csproj", "{67768A52-F292-A62F-51F9-B6F429C460A5}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro.Editor", "Unity.TextMeshPro.Editor.csproj", "{B19487E7-2436-162A-BD62-2795D5880585}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Rendering.LightTransport.Runtime", "Unity.Rendering.LightTransport.Runtime.csproj", "{51A53E27-72B5-789B-BBE3-0222361E9BAE}"
@@ -327,6 +329,10 @@ Global
 		{32A1F291-FF90-D30C-616B-F62C09A173D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32A1F291-FF90-D30C-616B-F62C09A173D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32A1F291-FF90-D30C-616B-F62C09A173D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67768A52-F292-A62F-51F9-B6F429C460A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67768A52-F292-A62F-51F9-B6F429C460A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67768A52-F292-A62F-51F9-B6F429C460A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67768A52-F292-A62F-51F9-B6F429C460A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B19487E7-2436-162A-BD62-2795D5880585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B19487E7-2436-162A-BD62-2795D5880585}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B19487E7-2436-162A-BD62-2795D5880585}.Release|Any CPU.ActiveCfg = Release|Any CPU

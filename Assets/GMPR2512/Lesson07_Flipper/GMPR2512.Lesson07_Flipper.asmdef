@@ -1,0 +1,16 @@
+{
+    "name": "GMPR2512.Lesson07_Flipper",
+    "rootNamespace": "GMPR2512.Lesson07_Flipper",
+    "references": [
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
