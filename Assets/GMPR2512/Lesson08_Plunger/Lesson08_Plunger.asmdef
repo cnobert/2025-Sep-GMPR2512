@@ -1,0 +1,14 @@
+{
+    "name": "Lesson08_Plunger",
+    "rootNamespace": "GMPR2512.Lesson08_Plunger",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
