@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets/GMPR2512/Lesson08_Plunger/ShowGizmo.cs" />
     <Compile Include="Assets/GMPR2512/Lesson08_Plunger/Plunger.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson08_Plunger/PlungerStop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/GMPR2512/Lesson08_Plunger/Lesson08_Plunger.asmdef" />
