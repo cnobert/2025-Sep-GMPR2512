@@ -8,7 +8,10 @@ namespace GMPR2512.Lesson08_Plunger
         {
             if (collision.collider.gameObject.name == "Plunger")
             {
-                collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+                //to get the gameObject that this script is attached to, use "gameObject"
+                //to get the gameObject that we just collided with, use collision.gameObject
+                collision.rigidbody.bodyType = RigidbodyType2D.Kinematic;
+                //collision.gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
             }
         }
     }

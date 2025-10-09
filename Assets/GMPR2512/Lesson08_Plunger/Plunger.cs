@@ -18,7 +18,7 @@ namespace GMPR2512.Lesson08_Plunger
             bool spacePressed = Input.GetKey(KeyCode.Space);
             bool spaceReleased = Input.GetKeyUp(KeyCode.Space);
 
-            if (transform.position.y >= _plungerLowestPoint.position.y && spacePressed)
+            if (spacePressed && transform.position.y >= _plungerLowestPoint.position.y)
             {
                 MovePlungerDown();
             }
