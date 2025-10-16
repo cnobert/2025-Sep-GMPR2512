@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 261823109}
   - component: {fileID: 261823108}
   - component: {fileID: 261823107}
+  - component: {fileID: 261823110}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -150,7 +151,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movementSpeed: 5
+  _scaleSpeed: 10
   _spinSpeed: 500
+  _minRotation: 25
+  _maxRotation: -25
 --- !u!212 &261823108
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -216,12 +220,33 @@ Transform:
   m_GameObject: {fileID: 261823106}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9, y: 0.92, z: 0}
-  m_LocalScale: {x: 3.0845, y: 2.8878, z: 1}
+  m_LocalPosition: {x: -4.6365, y: -3.4717, z: 0}
+  m_LocalScale: {x: 1.051506, y: 3.2632139, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &261823110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 261823106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d6763cdfb714b50b4168c09b3bc16f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fire:
+    m_Name: 
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 87fb05b9-98b1-4f9c-be4e-a9807f6719e9
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings: []
+    m_Flags: 0
 --- !u!1 &1731700967
 GameObject:
   m_ObjectHideFlags: 0
