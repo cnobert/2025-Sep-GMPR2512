@@ -55,7 +55,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "f1ba0d36-48eb-4cd5-b651-1c94a6531f70",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -1015,9 +1015,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Scale",
+                    "name": "Fire",
                     "type": "Button",
-                    "id": "fc271458-b538-4f05-9c78-87ca11167671",
+                    "id": "be4968ed-5dff-4ba8-bfda-c0b6be25df09",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -1114,37 +1114,15 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
-                    "id": "3acdc084-5af9-4aa6-a31f-295317267ba4",
-                    "path": "1DAxis",
+                    "name": "",
+                    "id": "51b5417b-f0d3-480b-981b-525d1148c333",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
-                    "action": "Scale",
-                    "isComposite": true,
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Fire",
+                    "isComposite": false,
                     "isPartOfComposite": false
-                },
-                {
-                    "name": "negative",
-                    "id": "c7c8ee45-94b7-432b-ae56-74204ea501c2",
-                    "path": "<Keyboard>/n",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Scale",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "positive",
-                    "id": "504d2f2e-a4d7-4be0-9717-64158cab1588",
-                    "path": "<Keyboard>/m",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Scale",
-                    "isComposite": false,
-                    "isPartOfComposite": true
                 }
             ]
         }

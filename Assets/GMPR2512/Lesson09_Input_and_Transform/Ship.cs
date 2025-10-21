@@ -5,17 +5,20 @@ namespace Lesson09_Input_and_Transform
 {
     public class Ship : MonoBehaviour
     {
-        private InputAction _moveAction, _spinAction, _scaleAction;
+        private InputAction _moveAction, _spinAction, _fireAction;
 
-        [SerializeField] private float _movementSpeed = 5, _scaleSpeed = 10; 
-        [SerializeField] private float _spinSpeed = 500, _minRotation = 25, _maxRotation = -25;
+        [SerializeField] private float _movementSpeed = 5, _spinSpeed = 500, _projectileSpeed = 10;
+        [SerializeField] private float _minRotation = 25, _maxRotation = -25;
+        [SerializeField] private GameObject _projectilePrefab;
+
+        
 
         void Awake()
         {
             //this creates an input method that is decoupled from the input device
             _moveAction = InputSystem.actions.FindAction("Ship/Move");
             _spinAction = InputSystem.actions.FindAction("Ship/Rotate");
-            _scaleAction = InputSystem.actions.FindAction("Ship/Scale");
+            _fireAction = InputSystem.actions.FindAction("Ship/Fire");
         }
 
         #region input disable/enable
@@ -24,6 +27,7 @@ namespace Lesson09_Input_and_Transform
         //It's best practice to include the methods below.
         void OnEnable()
         {
+            #region enable everything
             if (_moveAction != null)
             {
                 _moveAction.Enable();
@@ -32,10 +36,15 @@ namespace Lesson09_Input_and_Transform
             {
                 _spinAction.Enable();
             }
-            if(_scaleAction != null)
+            if (_fireAction != null)
             {
-                _scaleAction.Enable();
+                _fireAction.Enable();
             }
+            #endregion
+            //register methods with the fire action
+            _fireAction.performed += FireButtonPressed;
+            _fireAction.canceled += FireButtonReleased;
+
         }
         void OnDisable()
         {
@@ -47,18 +56,18 @@ namespace Lesson09_Input_and_Transform
             {
                 _spinAction.Disable();
             }
-            if(_scaleAction != null)
+            if(_fireAction != null)
             {
-                _scaleAction.Disable();
+                _fireAction.Disable();
             }
         }
         #endregion
-        
+
         void Update()
         {
             #region movement
             Vector2 moveDirection = _moveAction.ReadValue<Vector2>();
-            Vector2 translation = moveDirection * _movementSpeed * Time.deltaTime;
+            Vector2 translation = moveDirection.normalized * _movementSpeed * Time.deltaTime;
             transform.Translate(translation, Space.World);
             #endregion
 
@@ -68,7 +77,7 @@ namespace Lesson09_Input_and_Transform
 
             float spinValue = _spinAction.ReadValue<float>() * _spinSpeed * Time.deltaTime;
             transform.Rotate(0, 0, spinValue);
-            
+
             // Clamp rotation
             Vector3 euler = transform.eulerAngles;
 
@@ -83,26 +92,52 @@ namespace Lesson09_Input_and_Transform
             #endregion
 
             #region scaling (grow and shrink)
-            float scaleValue = _scaleAction.ReadValue<float>() * _scaleSpeed * Time.deltaTime;
-            Vector3 scaleChange = new Vector3(scaleValue, scaleValue, scaleValue);
-            transform.localScale += scaleChange;
-            
-            //prevent the transform's scale from becoming negative
-            Vector3 scale = transform.localScale;
-            if (scale.x < 0)
-            {
-                scale.x = 0;
-            }
-            if (scale.y < 0)
-            {
-                scale.y = 0;
-            }
-            if (scale.z < 0)
-            {
-                scale.z = 0;
-            }
-            transform.localScale = scale;
+            /* THIS WAS TO TRY OUT SCALING, BUT IT DOESN'T REALLY FIT IN THE GAME */
+            // float scaleValue = _scaleAction.ReadValue<float>() * _scaleSpeed * Time.deltaTime;
+            // Vector3 scaleChange = new Vector3(scaleValue, scaleValue, scaleValue);
+            // transform.localScale += scaleChange;
+
+            // //prevent the transform's scale from becoming negative
+            // Vector3 scale = transform.localScale;
+            // if (scale.x < 0)
+            // {
+            //     scale.x = 0;
+            // }
+            // if (scale.y < 0)
+            // {
+            //     scale.y = 0;
+            // }
+            // if (scale.z < 0)
+            // {
+            //     scale.z = 0;
+            // }
+            // transform.localScale = scale;
             #endregion
+        }
+
+        private void FireButtonPressed(InputAction.CallbackContext context)
+        {
+            /*
+                To instantiate a prefab:
+                    1. create the prefab in the project directory
+                    2. give your script a way to reference the prefab
+                    3. call the Instantiate method
+            */
+            GameObject theProjectileThatIJustInstantiated =
+                Instantiate(_projectilePrefab, transform.position, Quaternion.identity);
+
+            Projectile projectileScript
+                = theProjectileThatIJustInstantiated.GetComponent<Projectile>();
+
+            //"transform.up" means "up according to the gameobject to which this script is attached"
+            //in other words, it means "up according to the ship"
+            projectileScript.Initialize(transform.up, _projectileSpeed);
+   
+            
+        }
+        private void FireButtonReleased(InputAction.CallbackContext context)
+        {
+            //Debug.Log("Space bar released yippee!");
         }
     }
 }
