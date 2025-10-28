@@ -9,12 +9,17 @@ namespace Lesson09_Input_and_Transform
         [SerializeField] private float _movementSpeed = 5;
         [SerializeField] private float _projectileSpeed = 10, _projectileSpinVelocity = 0;
         [SerializeField] private Transform _firingPositionTransform;
+        private Vector2 _direction = new Vector2(1, 0);
         void Update()
         {
+            Vector2 translation = _direction.normalized * _movementSpeed * Time.deltaTime;
+            transform.Translate(translation, Space.World);
+
+
             int rando = Random.Range(1, _upperRandomFiringRange);
-            if(rando == 1)
+            if (rando == 1)
             {
-                GameObject thePrefab = Instantiate(_projectilePrefab, transform.position, transform.rotation);
+                GameObject thePrefab = Instantiate(_projectilePrefab, _firingPositionTransform.position, transform.rotation);
 
                 Projectile projectileScript
                     = thePrefab.GetComponent<Projectile>();
@@ -22,6 +27,13 @@ namespace Lesson09_Input_and_Transform
                 //"transform.up" means "up according to the gameobject to which this script is attached"
                 //in other words, it means "up according to the ship"
                 projectileScript.Initialize(transform.up, _projectileSpeed, _projectileSpinVelocity);
+            }
+        }
+        void OnTriggerEnter2D(Collider2D theCollider)
+        {
+            if (theCollider.tag.Equals("Wall"))
+            {
+                _direction.x *= -1;
             }
         }
     }
