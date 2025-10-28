@@ -124,7 +124,7 @@ namespace Lesson09_Input_and_Transform
                     3. call the Instantiate method
             */
             GameObject theProjectileThatIJustInstantiated =
-                Instantiate(_projectilePrefab, _firingPositionTransform.position, Quaternion.identity);
+                Instantiate(_projectilePrefab, _firingPositionTransform.position, transform.rotation);
 
             Projectile projectileScript
                 = theProjectileThatIJustInstantiated.GetComponent<Projectile>();

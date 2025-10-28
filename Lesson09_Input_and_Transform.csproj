@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Assets/GMPR2512/Lesson09_Input_and_Transform/Projectile.cs" />
     <Compile Include="Assets/GMPR2512/Lesson09_Input_and_Transform/ShowGizmo.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson09_Input_and_Transform/Alien.cs" />
     <Compile Include="Assets/GMPR2512/Lesson09_Input_and_Transform/Ship.cs" />
   </ItemGroup>
   <ItemGroup>
