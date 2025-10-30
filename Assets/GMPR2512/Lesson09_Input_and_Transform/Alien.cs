@@ -6,20 +6,19 @@ namespace Lesson09_Input_and_Transform
     {
         [SerializeField] private int _upperRandomFiringRange;
         [SerializeField] private GameObject _projectilePrefab;
-        [SerializeField] private float _movementSpeed = 5;
         [SerializeField] private float _projectileSpeed = 10, _projectileSpinVelocity = 0;
         [SerializeField] private Transform _firingPositionTransform;
-        private Vector2 _direction = new Vector2(1, 0);
+
+        
         void Update()
         {
-            Vector2 translation = _direction.normalized * _movementSpeed * Time.deltaTime;
-            transform.Translate(translation, Space.World);
-
+            
 
             int rando = Random.Range(1, _upperRandomFiringRange);
             if (rando == 1)
             {
-                GameObject thePrefab = Instantiate(_projectilePrefab, _firingPositionTransform.position, transform.rotation);
+                GameObject thePrefab =
+                    Instantiate(_projectilePrefab, _firingPositionTransform.position, transform.rotation);
 
                 Projectile projectileScript
                     = thePrefab.GetComponent<Projectile>();
@@ -33,7 +32,13 @@ namespace Lesson09_Input_and_Transform
         {
             if (theCollider.tag.Equals("Wall"))
             {
-                _direction.x *= -1;
+                AlienLeader leaderScript = transform.parent.GetComponent<AlienLeader>();
+                leaderScript.ChangeHorizontalDirection();
+                //The StepDown method would tell the leader to move down 
+                //by one Alien's height
+                //leaderScript.StepDown(transform.localScale.y);
+
+                //transform.parent.parent.parent.GetChild(0).GetChild(0).GetChild(0)
             }
         }
     }
