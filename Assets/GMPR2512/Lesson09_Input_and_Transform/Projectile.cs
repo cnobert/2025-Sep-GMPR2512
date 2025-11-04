@@ -8,6 +8,8 @@ namespace Lesson09_Input_and_Transform
         private Vector2 _direction;// = Vector2.up;
         private float _spinVelocity;
 
+        [SerializeField] GameObject _splosionPrefab;
+
         void Update()
         {
             transform.Translate(_direction.normalized * _speed * Time.deltaTime, Space.World);
@@ -20,6 +22,12 @@ namespace Lesson09_Input_and_Transform
             _speed = speed;
             _spinVelocity = spinSpeed;
         }
-
+        void OnTriggerEnter2D(Collider2D collider)
+        {
+            if (collider.tag == "Alien")
+            {
+                Instantiate(_splosionPrefab).transform.position = transform.position;
+            }
+        }
     }
 }

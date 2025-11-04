@@ -8,12 +8,9 @@ namespace Lesson09_Input_and_Transform
         [SerializeField] private GameObject _projectilePrefab;
         [SerializeField] private float _projectileSpeed = 10, _projectileSpinVelocity = 0;
         [SerializeField] private Transform _firingPositionTransform;
-
         
         void Update()
         {
-            
-
             int rando = Random.Range(1, _upperRandomFiringRange);
             if (rando == 1)
             {
@@ -32,8 +29,15 @@ namespace Lesson09_Input_and_Transform
         {
             if (theCollider.tag.Equals("Wall"))
             {
-                AlienLeader leaderScript = transform.parent.GetComponent<AlienLeader>();
-                leaderScript.ChangeHorizontalDirection();
+                if (transform.parent != null)
+                {
+                    AlienLeader leaderScript = transform.parent.GetComponent<AlienLeader>();
+                    leaderScript.ChangeHorizontalDirection();
+                }
+                else
+                {
+                    Debug.Log("The Alien must have a parent in the scene. It didn't. So this code broke");
+                }
                 //The StepDown method would tell the leader to move down 
                 //by one Alien's height
                 //leaderScript.StepDown(transform.localScale.y);

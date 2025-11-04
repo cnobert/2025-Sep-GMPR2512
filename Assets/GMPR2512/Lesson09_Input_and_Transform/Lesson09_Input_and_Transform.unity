@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 467326849}
   m_Layer: 0
   m_Name: Alien (1)
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,7 +621,7 @@ GameObject:
   - component: {fileID: 1080594019}
   m_Layer: 0
   m_Name: Alien
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -880,7 +880,7 @@ Transform:
   m_GameObject: {fileID: 1275686118}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.06, y: 0.84, z: -0.029354144}
+  m_LocalPosition: {x: 0.06, y: 0.99, z: -0.029354144}
   m_LocalScale: {x: 0.9510169, y: 0.30644637, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1039,7 +1039,7 @@ GameObject:
   - component: {fileID: 1848308853}
   m_Layer: 0
   m_Name: Alien (2)
-  m_TagString: Untagged
+  m_TagString: Alien
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

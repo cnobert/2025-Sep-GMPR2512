@@ -121,7 +121,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -167,3 +167,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4fdc9bd19e34f91903272e138dcfe0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _splosionPrefab: {fileID: 4287280626897907977, guid: 307af2e9603374797a8cea707b361d70,
+    type: 3}
