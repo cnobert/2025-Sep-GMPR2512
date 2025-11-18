@@ -17,7 +17,8 @@ namespace Lesson10_UI
             _changeToScene02Button = uiDoc.Q<Button>("ChangeToScene02Button");
             _welcomeMessageLabel = uiDoc.Q<Label>("LabelWelcome");
 
-            _welcomeMessageLabel.text = _gameState.startMenuGreeting;
+
+            _welcomeMessageLabel.text = _gameState.StartMenuMessage;
 
             if (_changeToScene02Button != null)
             {

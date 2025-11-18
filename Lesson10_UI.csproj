@@ -50,9 +50,12 @@
   <ItemGroup>
     <Compile Include="Assets/GMPR2512/Lesson10_UI/Lesson10_UI.cs" />
     <Compile Include="Assets/GMPR2512/Lesson10_UI/GameState.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson10_UI/Level01_UI.cs" />
+    <Compile Include="Assets/GMPR2512/Lesson10_UI/Circle.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/GMPR2512/Lesson10_UI/Lesson10_UI.uxml" />
+    <None Include="Assets/GMPR2512/Lesson10_UI/Level01_UI.uxml" />
     <None Include="Assets/GMPR2512/Lesson10_UI/Lesson10_UI.uss" />
     <None Include="Assets/GMPR2512/Lesson10_UI/Lesson10_UI.asmdef" />
   </ItemGroup>

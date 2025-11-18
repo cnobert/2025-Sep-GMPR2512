@@ -13,9 +13,26 @@ namespace Lesson10_UI
             Level02Lost,
             Level02Won
         }
-        public GamePlayState _gamePlayState = GamePlayState.NewGame;
+        private GamePlayState _gamePlayState = GamePlayState.Level01Lost;
+        public string StartMenuMessage
+        { 
+            get
+            {
+                string theMessage = "";
+                if(_gamePlayState == GamePlayState.NewGame)
+                {
+                    theMessage = "Welcome to this new game.";
+                }
+                else if(_gamePlayState == GamePlayState.Level01Lost)
+                {
+                    theMessage = "You allowed the alien invaders to take over the earth. Try again?";
+                }
+                return theMessage;
+            }
+        }
 
-        public string startMenuGreeting = "Welcome, from the game state ScriptableObject";
         public int _scoreLevel01 = 0, _scoreLevel02 = 0, _numAliensLevel01, _numAliensLevel02;
+
+        
     }
 }
