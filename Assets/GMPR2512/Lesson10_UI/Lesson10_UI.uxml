@@ -1,0 +1,5 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/GMPR2512/Lesson10_UI/Lesson10_UI.uss?fileID=7433441132597879392&amp;guid=e3a74591b1d6647f197c1f22788b6e28&amp;type=3#Lesson10_UI" />
+    <ui:Button text="Play!" name="ChangeToScene02Button" selectable="true" class="changeToScene02Button" style="height: 123px; width: 243px; position: absolute; top: 131px; left: 53px;" />
+    <ui:Label text="Welcome to Space Invaders" name="LabelWelcome" style="position: absolute; top: 71px; left: 2px; height: 48px; width: 183px; font-size: 32px;" />
+</ui:UXML>

@@ -1,0 +1,16 @@
+{
+    "name": "Lesson10_UI",
+    "rootNamespace": "Lesson10_UI",
+    "references": [
+        ""
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

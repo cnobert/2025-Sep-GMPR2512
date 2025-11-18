@@ -1,0 +1,20 @@
+.changeToScene02Button {
+    width: 200px;
+    height: 60px;
+    border-radius: 24px;        /* more rounded */
+    background-color: #2ecc71;  /* green */
+    color: white;
+    font-size: 20px;
+    unity-font-style: bold;
+    justify-content: center;
+    align-items: center;
+    border-width: 0;
+}
+
+.changeToScene02Button:hover {
+    background-color: #58d68d;  /* lighter green on hover */
+}
+
+.changeToScene02Button:active {
+    background-color: #27ae60;  /* darker green on click */
+}

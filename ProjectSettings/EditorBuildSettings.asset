@@ -4,7 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/GMPR2512/Lesson10_UI/Level01.unity
+    guid: 3c7c74ed4aefc40dba2c9714e4712a35
+  - enabled: 1
+    path: Assets/GMPR2512/Lesson10_UI/Lesson10_UI.unity
+    guid: 9a6edafff808c49c6a00f6f3a254ca11
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
       type: 3}
