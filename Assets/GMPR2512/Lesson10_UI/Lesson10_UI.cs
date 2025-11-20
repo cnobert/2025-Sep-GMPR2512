@@ -46,6 +46,7 @@ namespace Lesson10_UI
         }
         private void ChangeToScene02()
         {
+            _gameState.CurrentGameState = GameState.GamePlayState.Level01Lost;
             SceneManager.LoadScene("Level01");
         }
     }
