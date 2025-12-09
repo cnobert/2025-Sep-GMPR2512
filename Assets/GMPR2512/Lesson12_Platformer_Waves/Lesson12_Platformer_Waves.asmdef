@@ -1,0 +1,14 @@
+{
+    "name": "Lesson12_Platformer_Waves",
+    "rootNamespace": "GMPR2512.Lesson12_Platformer_Waves",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

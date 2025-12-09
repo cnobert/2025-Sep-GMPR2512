@@ -7,11 +7,17 @@ TagManager:
   - Ball
   - Wall
   - Alien
+  - BombPickup
+  - ExplosionFX
+  - Bullet
+  - HealthBar
+  - EnemyPath
+  - Ground
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ground
   - Water
   - UI
   - 
